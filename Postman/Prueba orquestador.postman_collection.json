@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "2eb97038-2d16-4aa6-a1fb-b4572576a32d",
+		"name": "Prueba orquestador",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15850799"
+	},
+	"item": [
+		{
+			"name": "http://localhost:9001/comunas/v1/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Canal",
+						"value": "BTINTERNO",
+						"type": "text"
+					},
+					{
+						"key": "Usuario",
+						"value": "BTS_DUMMY",
+						"type": "text"
+					},
+					{
+						"key": "Device",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "Requerimiento",
+						"value": "1",
+						"type": "text"
+					},
+					{
+						"key": "Token",
+						"value": "asd",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"CodigoCombo\": \"3\",\r\n    \"SBTIngCombUbica\": {\r\n        \"CodPais\": \"152\",\r\n        \"CodRegion\": \"13\",\r\n        \"CodProvincia\": \"131\",\r\n        \"CodComuna\": \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9001/comunas/v1/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9001",
+					"path": [
+						"comunas",
+						"v1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
