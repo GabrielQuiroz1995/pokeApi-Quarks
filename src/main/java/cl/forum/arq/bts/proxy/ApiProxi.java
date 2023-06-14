@@ -7,6 +7,5 @@ import javax.ws.rs.Path;
 @Path("/pokemon")
 @RegisterRestClient(configKey = "pokeapiurl")
 public interface ApiProxi {
-
-
+    
 }
