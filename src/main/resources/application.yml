@@ -27,3 +27,5 @@ getQuotation/mp-rest/url: https://get-operation-quotation-v3-bts-qa.apps.osd-for
 
 pokeapi:
   base-url: https://pokeapi.co/api/v2
+
+pokeapi/mp-rest/url: https://pokeapi.co/api/v2
