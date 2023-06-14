@@ -25,4 +25,5 @@ quarkus:
 
 getQuotation/mp-rest/url: https://get-operation-quotation-v3-bts-qa.apps.osd-forum.a8p2.p1.openshiftapps.com/operation/quotation-v3/v1/
 
-pokeapiurl/mp-rest/url: https://pokeapi.co/api/v2/
+pokeapi:
+  base-url: https://pokeapi.co/api/v2
