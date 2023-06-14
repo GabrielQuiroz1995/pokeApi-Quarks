@@ -1,0 +1,31 @@
+quarkus:
+  http:
+    port: 9001
+    cors: true 
+       origins:http://prodconfluence01.forum.local:8090,*.openshiftapps.com
+       methods:GET,PUT,POST
+       headers:X-Custom
+       exposed-headers:Content-Disposition
+       access-control-max-age:24H
+       access-control-allow-credentials:true
+  application:
+    version: v1
+  swagger-ui:
+    always-include: true
+  smallrye-openapi:
+    path: /swagger        
+  log:
+    console:
+      format:%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n
+      level:INFO
+      color:false
+    category:
+      "io.quarkus":
+         level: INFO
+
+getQuotation/mp-rest/url: https://get-operation-quotation-v3-bts-qa.apps.osd-forum.a8p2.p1.openshiftapps.com/operation/quotation-v3/v1/
+
+# pokeapi:
+#   base-url: https://pokeapi.co/api/v2
+
+pokeapiurl/mp-rest/url: https://pokeapi.co/api/v2/pokemon/
