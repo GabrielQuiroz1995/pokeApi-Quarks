@@ -24,3 +24,6 @@ quarkus:
          level: INFO
 
 getQuotation/mp-rest/url: https://get-operation-quotation-v3-bts-qa.apps.osd-forum.a8p2.p1.openshiftapps.com/operation/quotation-v3/v1/
+
+pokeapi:
+  base-url: https://pokeapi.co/api/v2
