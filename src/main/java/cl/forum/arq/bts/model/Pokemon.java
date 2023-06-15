@@ -6,11 +6,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Pokemon {
     @JsonProperty("id")
     private Long id;
+    @JsonProperty("name")
     private String name;
+    @JsonProperty("base_experience")
     private int base_experience;
+    @JsonProperty("height")
     private int height;
+    @JsonProperty("is_default")
     private boolean is_default;
+    @JsonProperty("order")
     private int order;
+    @JsonProperty("weight")
     private int weight;
 
     public Pokemon(){}
