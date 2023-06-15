@@ -11,7 +11,10 @@ import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
+import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.Response;
+
+import cl.forum.arq.bts.pojo.response.GetResponse;
 
 @ApplicationScoped
 public class PokeApiClientImp implements PokeApiClient{
@@ -20,9 +23,18 @@ public class PokeApiClientImp implements PokeApiClient{
     ApiProxi apiProxi;
     @Override
     public Response getPokemonData(String namePoke){
+        //Response response = apiProxi.callGetPokemonData(namePoke);
+        //Pokemon pok = response.readEntity(Pokemon.class);
+        //return Response.ok(pok).build();
+
         Response response = apiProxi.callGetPokemonData(namePoke);
-        Pokemon pok = response.readEntity(Pokemon.class);
-        return Response.ok(pok).build();
+        //GetResponse<Pokemon> getResponse= response.readEntity(new GenericType<>(){});
+        GetResponse<Pokemon> getResponse = new GetResponse<>();
+
+        getResponse.setSuccess(true);
+        getResponse.setBody(response.readEntity(Pokemon.class));
+        getResponse.setDetailResponse(null);
+        return Response.ok(getResponse).build();
     }
 
 }
